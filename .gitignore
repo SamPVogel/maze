@@ -1,0 +1,12 @@
+node_modules
+temp
+out
+public/bundle*
+public/css
+packages
+public/*.js
+public/*.js.map
+build
+bin
+obj
+.vs

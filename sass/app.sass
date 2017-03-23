@@ -1,0 +1,48 @@
+html
+  height: 100%
+body
+  height: 98%
+#content
+  height: 100%
+
+.shell
+  height: 100%
+  display: flex
+  flex-flow: column
+
+.pixiBox
+  height: 100%
+
+.shell > .pixiBox
+  flex: 1 1 auto
+
+@mixin button-bg($bg)
+    background: $bg
+    &:hover
+        background: darken($bg,8%)
+        transition: all 0.3s ease
+    &:active
+        background: darken($bg,25%)
+    &.selected
+        color: lightgrey
+
+h1
+    background-color: orange
+
+.dnd
+    font-family: 'Poiret One', cursive
+
+.dnd button
+    color: white
+    text-decoration: none
+    border-radius: 3px
+    margin: 2px
+    font-family: 'Poiret One', cursive
+    @include button-bg(#3498db)
+
+.btnList
+    display: inline-flex
+    flex-flow: row wrap
+
+.btnList button
+    flex: 0 1 12.5%

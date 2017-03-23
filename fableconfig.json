@@ -1,0 +1,24 @@
+{
+  "module": "es2015",
+  "sourceMaps": true,
+  "projFile": "./Beast.fsproj",
+  "outDir": "./out",
+  "refs": {
+        "Fable.Core": "fable-core"
+  },
+  "targets": {
+    "prod": {
+      "scripts": {
+        "postbuild": "webpack -p",
+        "postbuild-once": ""
+      },
+      "production": true
+    },
+    "watch": {
+      "scripts": {
+        "postbuild-once": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --colors --hot --config webpack.dev.config --content-base public/ --open"
+      },
+      "watch": true
+    }
+  }
+}
